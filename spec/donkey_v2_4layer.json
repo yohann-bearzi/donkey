@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "model_name": "donkey_v2_default",
+  "comment": "Donkey v2 default config. World-model drafter on MiMo-V2-Flash trunk. W=13 history + K=3 draft = SP=16. rollout_depth=1 (single forward; tree-decoding with rollout_depth>1 is a future option).",
+  "trunk": {
+    "hidden_dim": 4096,
+    "vocab_size": 152576,
+    "name": "MiMo-V2-Flash"
+  },
+  "architecture": {
+    "hidden_dim": 1024,
+    "ffn_dim": 4096,
+    "heads": 16,
+    "head_dim": 64,
+    "n_layers": 4,
+    "out_conf_dim": 1,
+    "ffn_activation": "silu",
+    "rms_eps": 1e-06,
+    "rollout_depth": 1
+  },
+  "sequence": {
+    "window_size": 13,
+    "draft_size": 3,
+    "spatial_pad": 16
+  },
+  "training": {
+    "loss_l2": 1.0,
+    "loss_cos": 0.1,
+    "loss_ce": 0.5,
+    "loss_calib": 0.01,
+    "learning_rate": 0.0003,
+    "lr_warmup_steps": 200,
+    "lr_final": 0.0001,
+    "ewma_decay": 0.999
+  }
+}

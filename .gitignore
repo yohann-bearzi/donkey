@@ -1,0 +1,23 @@
+
+# Built C/Obj-C dylibs
+*.dylib
+*.o
+
+# macOS junk
+.DS_Store
+
+# Swift PM build output
+.build/
+__pycache__/
+*.pyc
+donkey-trainer/weights/
+
+# checkpoints, logs, large data
+ckpts/
+archive/logs/
+*.npz
+*.log
+*.bin
+SESSION_STATE.md
+.build/
+*.dSYM/

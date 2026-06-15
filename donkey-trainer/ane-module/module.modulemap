@@ -1,0 +1,6 @@
+module CANEBridge {
+    header "../ane/ane_bridge.h"
+    header "../ane/ane_bridge_ext.h"
+    link "ane_bridge"
+    export *
+}
